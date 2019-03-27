@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+html, body, h3 {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+header {
+  padding: 2em;
+}
+
+header, aside {
+  background-color: #ffb366;
+}
+h1, h3 {
+  font-family: 'PT Sans';
+}
+h1, .tagline {
+  color: #e65c00;
+}
+
+section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em;
+}
+
+.nummer {
+  background-color: #e65c00;
+  color: #fff;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding: .2em;
+}
+article {
+  padding: 1em;
+}
+section img {
+  max-width: 100%;
+}
+
+aside ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside h3 {
+  background-color: #e65c00;
+  padding: 2em;
+  color: #fff;
+}
+
+aside a {
+  text-decoration: none;
+  padding: 2em;
+  display: block;
+  color: blue;
+}
+aside a:hover {
+  background-color: #e65c00;
+  color: #fff;
+}
+
+footer {
+  background-color: #333;
+  color: #eee;
+  padding: 2em;
+}
+
+#validatie img {
+    height: 2em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+}
+
+@media screen and (min-width: 760px) {
+
+  .afb {
+    display: block;
+    background-image: url('../img/write.jpeg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header"
+    "p1 p2"
+    "p3 p2"
+    "p4 p5"
+    "p6 afb"
+    "p7 aside"
+    "p8 aside"
+    "p9 aside"
+    "p10 aside"
+    "footer footer";
+  }
+  header {
+    grid-area: header;
+  }
+  .story-title {
+    grid-area: p1;
+  }
+  .book-cover {
+    grid-area: p2;
+  }
+  .blurb {
+    grid-area: p3;
+  }
+  .spelling-grammar {
+    grid-area: p4;
+  }
+  .plot-line {
+    grid-area: p5;
+  }
+  .afb {
+   grid-area: afb;
+  }
+  .promote-it {
+    grid-area: p6;
+  }
+  .chapter-activity {
+    grid-area: p7;
+  }
+  .talk-readers {
+    grid-area: p8;
+  }
+  .spacing {
+    grid-area: p9;
+  }
+  .pride {
+    grid-area: p10;
+  }
+  aside {
+    grid-area: aside;
+  }
+  footer {
+    grid-area: footer;
+  }
+
+  h1 {
+    font-size: 2.6em;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+  .afb {
+    background-image: url('../img/big.jpg');
+  }
+
+  body {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+    "p1 p2 afb"
+    "p3 p2 afb"
+    "p4 p5 afb"
+    "aside p6 p6"
+    "aside p7 p8"
+    "aside p9 p10"
+    "aside footer footer";
+  }
+
+}
